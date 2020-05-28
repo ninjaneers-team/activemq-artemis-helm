@@ -6,7 +6,7 @@ on:
   push:
     branches: [ master ]
     paths:
-    - "./**"
+    - "stable/**"
     - ".github/workflows/helm-release.yml"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -36,4 +36,4 @@ jobs:
         CR_TOKEN: "${{ secrets.CR_TOKEN }}"
       with: 
         charts_repo_url: https://ninjaneers-team.github.io/activemq-artemis-helm
-        charts_dir: ./
+        charts_dir: stable
